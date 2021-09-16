@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+    font-size: 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ------- MENU Y NAVEGACION  -----------*/
+
+
+menu{
+    padding: 1.25rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(12, 148, 189, 0.945);
+
+}
+
+
+menu header{
+    width: 6.25rem;
+    height: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+menu nav {
+    
+    position: fixed;
+    top: 5.625rem;
+    left: 0;
+    background: rgba(4, 133, 238, 0.945);
+    width: 0rem;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.4s;
+    z-index: 3;
+
+}
+
+.nav ul li a{
+    color: rgb(32, 32, 32);
+}
+
+.nav ul #li_dest{
+    color: white;
+}
+
+/* toggle */
+
+.nav_toggle{
+    width: 12.5rem;
+    transition: all 0.4s;
+}
+
+#btn-menu{
+    font-size: 1.875rem;
+}
+
+menu nav ul li{
+    padding: 1.25rem;
+}
+
+/* ------- BTN-UP  -----------*/
+.div-btn-up{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: rgba(35, 140, 211, 0.849);
+    text-align: center;
+    box-shadow: -2px 2px 5px black;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+
+}
+
+
+.div-btn-up:hover{
+    transform: scale(1.5);
+    transition: all 0.4s;
+}
+
+#btn-up{
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+    transition: all 0.4s;
+
+}
+
+.div-btn-up_toggle{
+    background: red;
+}
+
+/* ------- FOOTER -----------*/
+
+footer{
+    width: 100%;
+    height: auto;
+    padding: 3.125rem 0;
+}
+
+
+.content_footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.content_footer ul{
+ padding: 2.5rem;
+ 
+}
+
+.content_footer ul h2{
+    margin-bottom: 1.25rem;
+}
+
+.content_footer ul li{
+    padding: 0.625rem 0;
+}
+
+.right_footer{
+    text-align: center;
+    padding: 20px 0;
+    width: 80%;
+    margin: 5px auto;
+    border-top: 1px solid rgb(197, 195, 195);
+
+}
+
+/* ------------- RESPONSIVE DESIGN --------- */
+
+@media(min-width:700px){
+
+    html{
+        font-size: 14px;
+    }
+
+   
+}
+
+
+@media(min-width:1024px){
+
+
+    #btn-menu{
+        display: none;
+    }
+
+    menu{
+        padding: 0;
+    }
+
+    menu header{
+        display: none;
+    }
+
+    .nav{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        box-shadow: 0px 2px 10px rgb(2, 2, 2);
+        background: rgba(12, 148, 189, 0.931);
+
+
+    }
+    .nav ul{
+        display: flex;
+    }
+
+    .portada{
+        margin-top: 52px;
+    }
+}

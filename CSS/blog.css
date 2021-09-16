@@ -1,0 +1,154 @@
+
+.portada{
+    width:100%;
+    height: 31.25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://www.adslzone.net/app/uploads-adslzone.net/2021/03/como-usar-teamviewer-control-remoto.jpg");
+    position: relative;
+    display: flex;
+    align-items: center;
+    animation: back-changue 6s infinite alternate;
+
+}
+
+.portada::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(33, 33, 204, 0.616);
+}
+
+.portada_info_texto{
+    margin: 0 auto;
+    padding: 1.25rem;
+    text-align: center;
+    z-index: 2;
+
+}
+.portada_info_texto h2{
+    margin-bottom: 1.25rem;
+    color: white;
+    font-weight: bolder;
+}
+
+.portada_info_texto p{
+    color: white;
+}
+
+
+@keyframes back-changue{
+    from{
+        background-position: bottom;
+    }
+    to{background-position: top}
+
+}
+
+/* ---- CONTENIDO --- */
+
+.contenido{
+    display: grid;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 1200px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "section"
+                         "aside";
+
+}
+
+/* SECTION */
+
+section{
+    grid-area: section;
+    width: 100%;
+    height: auto;
+}
+
+section article{
+
+    width: 100%;
+     box-shadow: -2px 2px 2px rgb(204, 204, 204);
+    padding: 10px;
+    margin: 30px 0;
+    position: relative;
+}
+
+section article::before{
+    content: "";
+    width: 100%;
+    height: 10px;
+     background: rgba(12, 148, 189, 0.794);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+
+section article h2{
+    margin: 20px 0;
+}
+
+section article p{
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+section article img{
+    width: 100%;
+}
+
+
+/* ASIDE  */
+
+aside{
+    grid-area: aside;
+    background: rgb(255, 255, 255);
+}
+
+aside article{
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+aside article h2{
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+aside article p{
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+aside article img{
+    width: 100%;
+}
+
+/* ------ RESPONSIVE DESIGN -------- */
+
+@media(min-width:1024px){
+    .contenido{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "section section aside";
+        gap: 50px;
+    }
+
+    aside{
+        margin: 30px 0;
+    }
+
+    section article{
+        box-shadow: none;
+    }
+
+    section article::before{
+        display: none;
+    }
+}
